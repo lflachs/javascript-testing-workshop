@@ -12,4 +12,4 @@ jobs:
       - name: Install packages
         run: cd step-2 && npm install --only=dev
       - name: Run tests
-      - run: cd step-02 && npm run test
+        run: cd step-02 && npm run test
