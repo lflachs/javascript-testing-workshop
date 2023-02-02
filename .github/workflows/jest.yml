@@ -3,13 +3,13 @@ on:
   pull_request:
     branches:
       - master
-  
+
   jobs:
     test:
-    runs-on: ubuntu-latest
-    steps:
-       - uses: actions/checkout@v2
-       - name: Install packages
-       run: cd step-2 && npm install --only=dev
-       - name: Run tests
-       - run: cd step-02 && npm run test
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Install packages
+          run: cd step-2 && npm install --only=dev
+        - name: Run tests
+        - run: cd step-02 && npm run test
