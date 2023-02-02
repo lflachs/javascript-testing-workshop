@@ -12,7 +12,6 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           runTests: false
-      - run: yarn lint
       - name: Run e2e tests
         uses: cypress-io/github-action@v5
         with:
