@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install packages
-        run: cd step-2 && npm install --only=dev
+        run: cd step-02 && npm install --only=dev
       - name: Run tests
         run: cd step-02 && npm run test
