@@ -4,12 +4,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  cypress-run:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        working-directory: ./step-03
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
-        working-directory: ./step-03
+      - uses: actions/checkout@master
+      - name: Install dependencies
+        uses: cypress-io/github-action@v5
+        with:
+          runTests: false
+      - run: yarn lint
+      - name: Run e2e tests
+        uses: cypress-io/github-action@v5
+        with:
+          install: false
+          working-directory: step-03
