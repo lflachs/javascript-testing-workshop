@@ -171,16 +171,21 @@ The first thing to add is the name of the action, then we should precise when th
 
 ```
 name: Jest
+on:
+  workflow_dispatch:
   pull_request:
     branches:
-      - main
-  jobs:
-    test:
+      - master
+
+jobs:
+  test:
     runs-on: ubuntu-latest
     steps:
-       - uses: actions/checkout@v2
-       - name: Install packages
-       run: npm install --only=dev
-       - name: Run tests
-       - run: npm run test
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: cd step-02 && npm install --only=dev
+      - name: Run tests
+        run: cd step-02 && npm run test
 ```
+
+Now if you go to github, you should see the action, and be able to trigger it or it will automatically be trigger when a PR is opened!
