@@ -8,6 +8,6 @@ name: Jest
     steps:
        - uses: actions/checkout@v2
        - name: Install packages
-       run: npm install --only=dev
+       run: cd step-2 && npm install --only=dev
        - name: Run tests
-       - run: npm run test
+       - run: cd step-02 && npm run test
