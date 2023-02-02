@@ -1,0 +1,13 @@
+name: Jest
+  pull_request:
+    branches:
+      - main
+  jobs:
+    test:
+    runs-on: ubuntu-latest
+    steps:
+       - uses: actions/checkout@v2
+       - name: Install packages
+       run: npm install --only=dev
+       - name: Run tests
+       - run: npm run test
