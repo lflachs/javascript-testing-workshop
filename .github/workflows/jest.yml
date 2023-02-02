@@ -1,9 +1,9 @@
 name: Jest
 on:
+  workflow_call:
   pull_request:
     branches:
       - master
-  workflow_call:
 
 jobs:
   test:
