@@ -5,7 +5,6 @@
   "description": "This repo contains an example React App",
   "scripts": {
     "dev": "http-server -p 8888 -c-1",
-    "cypress": "cypress open",
     "start": "http-server -p 8888 -c-1",
     "start:ci": "http-server -p 8888 -c-1 --silent",
     "lint": "eslint --fix cypress/e2e cypress/support js",
@@ -20,7 +19,6 @@
   },
   "devDependencies": {
     "axe-core": "4.6.2",
-    "cypress": "12.5.1",
     "eslint": "7.16.0",
     "eslint-plugin-cypress-dev": "3.0.0",
     "eslint-plugin-mocha": "5.3.0",
